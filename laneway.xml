@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="laneway.xsl"?>
+<!DOCTYPE school SYSTEM "laneway.dtd">
+<school>
+    <people>
+        <trainers>
+            <trainer id="T001">
+                <name>John Smith</name>
+                <location>Sydney</location>
+            </trainer>
+
+            <trainer id="T002">
+                <name>Sarah Lee</name>
+                <location>Melbourne</location>
+            </trainer>
+        </trainers>
+
+        <students>
+            <student id="S001">
+                <name>Anna Brown</name>
+                <enrolment course="WD101" date="2026-02-15"/>
+            </student>
+            <student id="S002">
+                <name>Tom White</name>
+                <enrolment course="GD101" date="2026-03-01"/>
+            </student>
+        </students>
+    </people>
+    <courses>
+        <course id="WD101">
+            <name>Web Development</name>
+            <duration unit="weeks">12</duration>
+            <trainerRef>T001</trainerRef>
+        </course>
+        <course id="GD101">
+            <name>Graphic Design</name>
+            <duration unit="weeks">8</duration>
+            <trainerRef>T002</trainerRef>
+        </course>
+        <course id="UX101">
+            <name>UX Design</name>
+            <duration unit="weeks">6</duration>
+            <trainerRef>T002</trainerRef>
+        </course>
+        <course id="DB101">
+            <name>Databases</name>
+            <duration unit="weeks">10</duration>
+            <trainerRef>T001</trainerRef>
+        </course>
+    </courses>
+</school>

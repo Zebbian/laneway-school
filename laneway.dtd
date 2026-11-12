@@ -1,0 +1,33 @@
+<!ELEMENT school (people, courses)>
+
+<!ELEMENT people (trainers, students)>
+
+<!ELEMENT trainers (trainer+)>
+<!ELEMENT trainer (name, location)>
+<!ATTLIST trainer
+          id ID #REQUIRED>
+
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, enrolment)>
+<!ATTLIST student
+          id ID #REQUIRED>
+
+<!ELEMENT enrolment EMPTY>
+<!ATTLIST enrolment
+          course IDREF #REQUIRED
+          date CDATA #REQUIRED>
+
+<!ELEMENT courses (course+)>
+
+<!ELEMENT course (name, duration, trainerRef)>
+<!ATTLIST course
+          id ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+
+<!ELEMENT duration (#PCDATA)>
+<!ATTLIST duration
+          unit CDATA #REQUIRED>
+
+<!ELEMENT trainerRef (#PCDATA)>
